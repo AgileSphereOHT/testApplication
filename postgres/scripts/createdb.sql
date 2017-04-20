@@ -1,0 +1,5 @@
+CREATE USER baseuser WITH PASSWORD 'Password';
+
+CREATE DATABASE basedb WITH OWNER baseuser;
+
+GRANT ALL PRIVILEGES ON DATABASE basedb TO baseuser;

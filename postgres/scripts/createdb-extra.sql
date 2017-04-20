@@ -1,0 +1,3 @@
+CREATE DATABASE extradb WITH OWNER baseuser;
+
+GRANT ALL PRIVILEGES ON DATABASE extradb TO baseuser;
