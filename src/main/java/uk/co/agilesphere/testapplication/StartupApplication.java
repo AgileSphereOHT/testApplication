@@ -2,13 +2,18 @@ package uk.co.agilesphere.testapplication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class StartupApplication {
+public class StartupApplication extends SpringBootServletInitializer {
 
-    public static void main(String[] args) {
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(StartupApplication.class);
+    }
 
+    public static void main(String[] args) throws Exception{
         SpringApplication.run(StartupApplication.class, args);
-
     }
 }
